@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ScoreHistoryActivity extends AppCompatActivity {
 
@@ -93,5 +94,9 @@ public class ScoreHistoryActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        Collections.reverse(mDateList);
+        Collections.reverse(mUserScoreList);
+        Collections.reverse(mComputerScoreList);
     }
 }

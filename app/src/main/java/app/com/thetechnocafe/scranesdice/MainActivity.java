@@ -250,7 +250,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 FileOutputStream fileOutputStream = openFileOutput(SCORE_FILE_NAME, MODE_APPEND);
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("DD MMM YYY");
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MM yyy");
                 String score = simpleDateFormat.format(new Date()) + "-" + String.valueOf(COMPUTER_SCORE) + "-" + String.valueOf(USER_SCORE) + "\n";
                 fileOutputStream.write(score.getBytes());
                 fileOutputStream.close();

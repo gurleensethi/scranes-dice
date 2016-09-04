@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Scrane\'s Dice</string>
+    <string name="your_score">Your Score</string>
+    <string name="computer_score">Computer Score</string>
+    <string name="roll">Roll</string>
+    <string name="hold">Hold</string>
+    <string name="reset">Reset</string>
+    <string name="turn_score">Turn Score</string>
+    <string name="game_reset">Game Reset!</string>
+    <string name="computer_turn">Computer\'s Turn</string>
+    <string name="user_turn">Your Turn</string>
+    <string name="user_progress">User</string>
+    <string name="computer_progress">Computer</string>
+    <string name="you_win">YOU WIN ! :)</string>
+    <string name="you_loose">YOU LOOSE :(</string>
+    <string name="game_over_text">Game Over! Press reset to start new Game</string>
+    <string name="score_history">Score History</string>
+</resources>

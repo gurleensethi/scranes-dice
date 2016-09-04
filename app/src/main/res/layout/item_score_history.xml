@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:layout_margin="4dp">
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 January 2016 12:56"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/computer_score_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Computer Score : 56"
+        android:textSize="16sp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/user_score_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Your Score : 102"
+        android:textSize="16sp"
+        android:layout_marginLeft="16dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_margin="8dp"/>
+</LinearLayout>

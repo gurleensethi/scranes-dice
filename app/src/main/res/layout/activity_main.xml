@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="app.com.thetechnocafe.scranesdice.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="@android:color/white">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/your_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/your_score"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/your_score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/your_score"
+            android:layout_marginLeft="16dp"
+            android:text="0"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/turn_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/turn_score"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/turn_score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/turn_score"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:text="0"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/computer_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/computer_score"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/computer_score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/computer_score"
+            android:layout_marginRight="16dp"
+            android:text="0"
+            android:textSize="24sp"/>
+
+        <ImageView
+            android:id="@+id/dice_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/dice1"/>
+
+        <TextView
+            android:id="@+id/turn_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dice_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/user_turn"
+            android:textSize="16dp"/>
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/roll_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/roll"/>
+
+            <Button
+                android:id="@+id/hold_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/hold"/>
+
+            <Button
+                android:id="@+id/reset_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/reset"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/user_progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/your_score_text"
+            android:layout_marginTop="24dp"
+            android:text="@string/user_progress"/>
+
+        <TextView
+            android:id="@+id/computer_progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_progress_text"
+            android:layout_marginTop="24dp"
+            android:text="@string/computer_progress"/>
+
+        <TextView
+            android:id="@+id/game_over_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/turn_name_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="@string/game_over_text"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/user_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/user_progress_text"
+            android:layout_marginLeft="40dp"
+            android:layout_toEndOf="@+id/user_progress_text"
+            android:layout_toRightOf="@+id/user_progress_text"/>
+
+        <ProgressBar
+            android:id="@+id/computer_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/computer_progress_text"
+            android:layout_below="@id/user_progress"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/computer_progress_text"
+            android:layout_toRightOf="@+id/computer_progress_text"
+            />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
